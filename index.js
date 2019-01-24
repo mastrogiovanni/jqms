@@ -1,7 +1,7 @@
 var proxy = require('express-http-proxy')
 var app = require('express')()
 var jq = require('node-jq')
-
+console.log('hello')
 app.use('/', proxy(process.env.TARGET, {
 	userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
 		return new Promise(function(resolve, reject) {
